@@ -107,8 +107,30 @@ console.log(whereIsWaldo[2][1][1]);
 ////////////////////////////////
 //  Excited Kitten
 ////////////////////////////////
+const catPhrase = "Love me, pet me! HSSSSS!";
+const kittyTalk = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "...why does the red dot always get away..."]
 
+for (let i = 1; i <= 20; i++) {
+    console.log("Love me, pet me! HSSSSS!");
+    if (i % 2 === 0) {
+        let randomIndex = Math.floor(Math.random() * kittyTalk.length);
+        console.log(kittyTalk[randomIndex]);
+    }
+    }
 
 ////////////////////////////////
 //  Find the Median
 ////////////////////////////////
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+
+nums.sort(function(a, b) {
+    return a - b;
+});
+const middleIndex = Math.floor(nums.length / 2);
+
+if (nums.length % 2 === 0) {
+    const median = (nums[middleIndex - 1] + nums[middleIndex]) / 2;
+    console.log(median);
+} else {
+    console.log(nums[middleIndex]);
+}
